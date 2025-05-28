@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.weather-app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;         
+  background-color: #242C38;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+   
+}
+
+.nimbus-icon {
+    width: 500px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input#search {
+    font-family: "Krona One", sans-serif;
+    height: 30px;
+    border-radius: 20px;
+    padding-inline-start: 10px;
+    color: white;
+    font-size: .8rem;
+    border-color: rgb(120, 145, 167);
+    background-color: #313d4c;
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    margin-top: 3px;
+}
+
+.submit {
+    width: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+}
