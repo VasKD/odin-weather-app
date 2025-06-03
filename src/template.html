@@ -4,24 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nimbus</title>
+    <link rel="icon" href="./img/Nimbus Icon.jpg" type="image/x-icon">
+
     <!-- Krona One -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+    <!-- M Plus Rounded -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <div class="weather-app">
 
-        <div class="home">
+        <div class="home-page">
             <img class="nimbus-icon" src="./img/Nimbus Icon.svg" alt="nimbus icon">
-            <form id="search-modal">
+            <form>
+                <input type="text" name="search" id="search" placeholder="Enter a City">
+                <button type="submit" class="home">
+                    <img class="submit" src="./img/Arrow 1.svg" alt="submit button">
+                </button>
+            </form>
+        </div>
+        <!-- <div class="info-page">
+            <form>
                 <input type="text" name="search" id="search" placeholder="Enter a City">
                 <button type="submit">
                     <img class="submit" src="./img/Arrow 1.svg" alt="submit button">
                 </button>
             </form>
-        </div>
+            <div class="info-container">
+                <div class="current-conditions">
+                    <div class="conditions">
+                        <h1>Tokyo, Japan</h1>
+                        <h2>72.4 °F</h2>
+                        <p>Warming up with a chance of rain multiple days.</p>
+                    </div>
+                    <div class="icon">
+                        <img src="./img/Sun (1).svg" alt="Sun Icon">
+                    </div>
+                </div>
+                <div class="forecast">
+                    <div class="card">
+                        <h3>Monday</h3>
+                        <img src="./img/Cloudy.svg" alt="cloudy icon">
+                        <div class="temp">
+                            <p>H: 71</p>
+                            <p>L: 62</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Tuesday</h3>
+                        <img src="./img/Snow.svg" alt="cloudy icon">
+                        <div class="temp">
+                            <p>H: 70 </p>
+                            <p>L: 44</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Wednesday</h3>
+                        <img src="./img/Storm.svg" alt="cloudy icon">
+                        <div class="temp">
+                            <p>H: 68 </p>
+                            <p>L: 44</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Thursday</h3>
+                        <img src="./img/Sun (1).svg" alt="sun">
+                        <div class="temp">
+                            <p>H: 74 </p>
+                            <p>L: 60</p>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <h3>Friday</h3>
+                        <img src="./img/Rain.svg" alt="cloudy icon">
+                        <div class="temp">
+                            <p>H: 64 </p>
+                            <p>L: 44</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
     </div>
 
 </body>
