@@ -1,15 +1,47 @@
 import { getIcon } from "./icons";
-import { parseISO, format } from 'date-fns'
+import arrowIcon from "../img/Arrow.svg";
+import { parseISO, format } from 'date-fns';
 
 export function displayInfoPage(weatherData) {
-    clearHomePage();
+    console.log("hello");
+    clearPage();
+    createSearch();
     displayCurrentConditions(weatherData);
     displayForecastData(weatherData);
 }
 
-export function clearHomePage() {
+export function clearPage() {
+    console.log("Clearing page...");
     const appContainer = document.querySelector(".weather-app");
     appContainer.textContent = "";
+
+    // Reset the infoPage and infoContainer
+    infoPage.textContent = "";
+    infoContainer.textContent = "";
+}
+
+function createSearch() {
+    const form = document.createElement("form");
+    form.id = "weather-search-form";  // Add ID for easy identification
+
+    const searchInput = document.createElement("input");
+    searchInput.type = "text";
+    searchInput.name = "search";
+    searchInput.id = "search";
+    searchInput.placeholder = "Enter a City";
+    form.appendChild(searchInput);
+
+    const submitBtn = document.createElement("button");
+    submitBtn.type = "submit";
+
+    const arrowImg = document.createElement("img");
+    arrowImg.classList.add("submit");
+    arrowImg.src = arrowIcon;
+    submitBtn.appendChild(arrowImg);
+
+    form.appendChild(submitBtn);
+    
+    infoPage.appendChild(form);
 }
 
 
@@ -85,7 +117,6 @@ function displayForecastData(weatherData) {
 function createForecastDiv() {
     const forecastDiv = document.createElement("div");
     forecastDiv.classList.add("forecast");
-    console.log(forecastDiv);
     return forecastDiv;
 }
 

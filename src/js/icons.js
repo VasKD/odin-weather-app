@@ -6,6 +6,8 @@ import stormIcon from "../img/Storm.svg";
 import cloudyDayIcon from "../img/Partly Cloudy Day.svg";
 import cloudyNightIcon from "../img/Partly Cloudy Night.svg"
 import moonIcon from "../img/Moon.svg";
+import windIcon from "../img/Windy.svg";
+import fogIcon from "../img/Foggy.svg"
 
 const iconDict = {
     "snow": snowIcon,
@@ -15,7 +17,9 @@ const iconDict = {
     "partly-cloudy-night": cloudyNightIcon,
     "clear-day": sunIcon,
     "clear-night": moonIcon,
-    "thunder-rain": stormIcon
+    "thunder-rain": stormIcon,
+    "wind": windIcon,
+    "fog": fogIcon
 };
 
 const iconClasses = {

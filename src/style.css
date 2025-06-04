@@ -12,6 +12,12 @@ html, body {
   background-color: #242C38;
 }
 
+
+
+/* ********************* */
+/* * Home Page Styling * */
+/* ********************* */
+
 .home-page {
     display: flex;
     flex-direction: column;
@@ -26,6 +32,13 @@ html, body {
 .nimbus-icon {
     width: 500px;
 }
+
+
+
+
+/* **************** */
+/* * From Styling * */
+/* **************** */
 
 form {
     display: flex;
@@ -42,7 +55,6 @@ input#search {
     border-color: rgb(120, 145, 167);
     background-color: #313d4c;
 }
-
 
 button {
     background-color: transparent;
@@ -61,6 +73,12 @@ button:hover {
     cursor: pointer;
 }
 
+
+
+
+/* ********************* */
+/* * Info Page Styling * */
+/* ********************* */
 
 .info-page {
     display: flex;
@@ -82,11 +100,6 @@ button:hover {
     gap: 20px;
 
     padding: 20px;
-/* 
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%); */
 }
 
 .icon img {
@@ -95,13 +108,11 @@ button:hover {
 
 img.cloudy {
     width: 220px;
-    /* 150px for forecast */
 }
 
 img.clear-night {
     width: 110px;
 }
-
 
 .icon {
     padding: 20px;
@@ -117,7 +128,6 @@ img.clear-night {
     height: 42%;
     border-radius: 20px;
 }
-
 
 h1, h2, p {
     margin: 0;
@@ -202,4 +212,71 @@ h3 {
 .temp {
     display: flex;
     gap: 15px;
+}
+
+
+
+/* ****************** */
+/* * Switch Styling * */
+/* ****************** */
+
+/* Container for the toggle */
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 55px;
+    height: 30px;
+    padding-inline: 2px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #44546c;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+/* The circular slider */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+/* Toggled state */
+.switch input:checked + .slider +  {
+    background-color: #85a1ca;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.switch div {
+    font-family: "Krona One", sans-serif;
+    position: absolute;
+    font-size: .9rem;
+    top: 6px;
+    left: 10px;
+    display: flex;
+    gap: 15px;
+    z-index: 1;
+    padding-inline: 2px;
 }
