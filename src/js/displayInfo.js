@@ -3,7 +3,6 @@ import arrowIcon from "../img/Arrow.svg";
 import { parseISO, format } from 'date-fns';
 
 export function displayInfoPage(weatherData) {
-    console.log("hello");
     clearPage();
     createSearch();
     displayCurrentConditions(weatherData);
@@ -132,6 +131,7 @@ function createCards(forecastDiv, weatherData) {
         card.appendChild(day);
 
         const icon = getIcon(weatherData.days[i].icon);
+        
         // remove any classes that conflict with sizing
         icon.classList.value = '';
         card.appendChild(icon);

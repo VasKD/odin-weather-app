@@ -1,6 +1,6 @@
 import "../style.css";
 import { displayInfoPage } from "./displayInfo.js";
-
+import { showLoadingScreen, hideLoadingScreen, delay } from "./loading.js";
 
 
 export async function getInfo(searchQuery) {
@@ -21,22 +21,36 @@ export async function getInfo(searchQuery) {
 }
 
 
-const searchForm = document.querySelector("form");
 document.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const searchQuery = document.getElementById("search").value.trim();
     if (!searchQuery) {
-        alert("Please enter a location.");
+        alert("Please enter a valid location.");
         return;
     }
 
+    showLoadingScreen();
+    
     try {
         const weatherData = await getInfo(searchQuery);
+
+        // Check if data is valid before proceeding
+        if (!weatherData) {
+            throw new Error("No weather data returned.");
+        }
+
+        // Allow time for loading screen to show
+        await delay(1500);
         displayInfoPage(weatherData);
+
     } catch (error) {
         console.log(error.message);
         alert("Error fetching weather data. Please try again.");
+        return;
+        
+    } finally {
+        hideLoadingScreen();
     }
-       
 });
 
