@@ -1,69 +1,35 @@
-<head><script defer src="main.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve './img/Nimbus Icon.jpg' in 'C:\Users\kia  ra\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\src'
-  ModuleNotFoundError: Module not found: Error: Can't resolve './img/Nimbus Icon.  jpg' in 'C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-ap  p\src'
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\Compilation.js:2230:28
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:933:13
-      at eval (eval at create (C:\Users\kiara\Documents\VS Code\Odin\odin-weather  -app\odin-weather-app\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anon  ymous>:10:1)
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:347:22
-      at eval (eval at create (C:\Users\kiara\Documents\VS Code\Odin\odin-weather  -app\odin-weather-app\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anon  ymous>:9:1)
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:530:22
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:163:10
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:794:25
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:1018:8
-      at C:\Users\kiara\Documents\VS Code\Odin\odin-weather-app\odin-weather-app\  node_modules\webpack\lib\NormalModuleFactory.js:1147:5
-  
-  - Compilation.js:2230 
-    [odin-weather-app]/[webpack]/lib/Compilation.js:2230:28
-  
-  - NormalModuleFactory.js:933 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:933:13
-  
-  
-  - NormalModuleFactory.js:347 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:347:22
-  
-  
-  - NormalModuleFactory.js:530 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:530:22
-  
-  - NormalModuleFactory.js:163 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:163:10
-  
-  - NormalModuleFactory.js:794 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:794:25
-  
-  - NormalModuleFactory.js:1018 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:1018:8
-  
-  - NormalModuleFactory.js:1147 
-    [odin-weather-app]/[webpack]/lib/NormalModuleFactory.js:1147:5
-  
-  - child-compiler.js:211 
-    [odin-weather-app]/[html-webpack-plugin]/lib/child-compiler.js:211:18
-  
-  - Compiler.js:625 finalCallback
-    [odin-weather-app]/[webpack]/lib/Compiler.js:625:5
-  
-  - Compiler.js:661 
-    [odin-weather-app]/[webpack]/lib/Compiler.js:661:11
-  
-  - Compiler.js:1347 
-    [odin-weather-app]/[webpack]/lib/Compiler.js:1347:17
-  
-  
-  - Hook.js:20 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [odin-weather-app]/[tapable]/lib/Hook.js:20:14
-  
-  - Compiler.js:1343 
-    [odin-weather-app]/[webpack]/lib/Compiler.js:1343:33
-  
-  - Compilation.js:3061 finalCallback
-    [odin-weather-app]/[webpack]/lib/Compilation.js:3061:11
-  
-  - Compilation.js:3404 
-    [odin-weather-app]/[webpack]/lib/Compilation.js:3404:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimbus</title>
+    <link rel="icon" href="08bc23878a07338cbb39.jpg" type="image/x-icon">
+
+    <!-- Krona One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+    <!-- M Plus Rounded -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+<script defer src="main.js"></script></head>
+<body>
+    <div id="loading-screen" style="display: none;">
+        <img src="6fc8e73784ed5febbfec.svg" alt="Loading Icon">
+    </div>
+    <div class="weather-app">
+        <div class="home-page">
+            <img class="nimbus-icon" src="a34cdf9b9713bf089dc5.svg" alt="nimbus icon">
+            <form>
+                <input type="text" name="search" id="search" placeholder="Enter a City">
+                <button type="submit" class="home">
+                    <img class="submit" src="bb60c30904bf2413fe3a.svg" alt="submit button">
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
